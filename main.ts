@@ -29,17 +29,17 @@ input.onGesture(Gesture.Shake, function trepani() {
     
     if (povoleni == true && zmena_stran == false) {
         pocet_tecek = randint(1, 6)
-        hazeni()
+        displej()
     } else if (povoleni == true && zmena_stran == true) {
         pocet_tecek = randint(1, 10)
-        hazeni()
+        displej()
     } else {
         soundExpression.sad.play()
         basic.showIcon(IconNames.No)
     }
     
 })
-function hazeni() {
+function displej() {
     
     
     if (pocet_tecek == 1) {

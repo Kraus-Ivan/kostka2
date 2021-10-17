@@ -28,16 +28,16 @@ def trepani():
     global pocet_tecek
     if povoleni == True and zmena_stran == False :
         pocet_tecek = randint(1, 6)
-        hazeni()
+        displej()
     elif povoleni == True and zmena_stran == True:
         pocet_tecek = randint(1, 10)
-        hazeni()
+        displej()
     else: 
         soundExpression.sad.play()           
         basic.show_icon(IconNames.NO)
 input.on_gesture(Gesture.SHAKE, trepani)
 
-def hazeni():
+def displej():
     global povoleni
     global pocet_tecek
     if pocet_tecek == 1:
