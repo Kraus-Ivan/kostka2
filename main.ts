@@ -50,7 +50,6 @@ function displej() {
                     . . . . .
                     . . . . .
                     `)
-        hudba()
     } else if (pocet_tecek == 2) {
         basic.showLeds(`
                         . . . . #
@@ -59,7 +58,6 @@ function displej() {
                         . . . . .
                         # . . . .
                         `)
-        hudba()
     } else if (pocet_tecek == 3) {
         basic.showLeds(`
                         . . . . #
@@ -68,7 +66,6 @@ function displej() {
                         . . . . .
                         # . . . .
                         `)
-        hudba()
     } else if (pocet_tecek == 4) {
         basic.showLeds(`
                         # . . . #
@@ -77,7 +74,6 @@ function displej() {
                         . . . . .
                         # . . . #
                         `)
-        hudba()
     } else if (pocet_tecek == 5) {
         basic.showLeds(`
                         # . . . #
@@ -86,7 +82,6 @@ function displej() {
                         . . . . .
                         # . . . #
                         `)
-        hudba()
     } else if (pocet_tecek == 6) {
         basic.showLeds(`
                         # . . . #
@@ -95,7 +90,6 @@ function displej() {
                         . . . . .
                         # . . . #
                         `)
-        hudba()
     } else if (pocet_tecek == 7) {
         basic.showLeds(`
                         # . . . #
@@ -104,7 +98,6 @@ function displej() {
                         . . . . .
                         # . . . #
                         `)
-        hudba()
     } else if (pocet_tecek == 8) {
         basic.showLeds(`
                         # . # . #
@@ -113,7 +106,6 @@ function displej() {
                         . . . . .
                         # . # . #
                         `)
-        hudba()
     } else if (pocet_tecek == 9) {
         basic.showLeds(`
                         # . # . #
@@ -122,7 +114,6 @@ function displej() {
                         . . . . .
                         # . # . #
                         `)
-        hudba()
     } else if (pocet_tecek == 10) {
         basic.showLeds(`
                         # . . . #
@@ -131,18 +122,21 @@ function displej() {
                         . . # . .
                         # . . . #
                         `)
-        hudba()
     }
     
+    hudba()
     povoleni = false
 }
 
 function hudba() {
     
-    for (let i = 0; i < pocet_tecek; i++) {
-        music.playTone(Note.C, music.beat())
-        music.rest(200)
+    if (pocet_tecek != 0) {
+        for (let i = 0; i < pocet_tecek; i++) {
+            music.playTone(Note.C, music.beat())
+            music.rest(150)
+        }
     }
+    
 }
 
 // zde jsou jen animace
